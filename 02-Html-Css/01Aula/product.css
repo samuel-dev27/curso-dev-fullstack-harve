@@ -1,0 +1,183 @@
+.linha-produto {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.produto-estilo {
+    border: 1px solid black;
+}
+
+.col-fotos {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 4;
+}
+
+.col-capa {
+    height: 100%;
+    flex: 6;
+    display: flex;
+    align-items: center;
+}
+
+.capa {
+
+    height: 95%;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url('assets/img/product_1.jpg');
+    background-size: cover;
+}
+
+.col-dados {
+    height: 100%;
+    flex: 5;
+    display: flex;
+    align-items: center;
+}
+
+.mini-imagen {
+    flex: 1;
+    padding: 15px;
+
+}
+
+.mini {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url("/assets/img/product_page_mini.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mini:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 7px gray;
+    transition: 0s.1s;
+    transition-duration: 0.2s;
+}
+
+.detalhes {
+    margin-bottom: 10px;
+    height: 96%;
+    width: 100%;
+    padding-left: 50px;
+    font-size: 20px;
+
+}
+
+.detalhe {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.branco {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+
+.verde {
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.preto {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.azul {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.tamanho {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tamanho-ativo {
+    border: 2px solid gray;
+    background-color: lightgray;
+    box-shadow: 2px 2px 7px gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tamanho:hover {
+    box-shadow: 2px 2px 7px gray;
+    background-color: lightgray;
+    transition: 0s.1s;
+    transition-duration: 0.2s;
+}
+
+.detalhe select {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 50px;
+
+}
+
+.linha-tabela {
+    display: flex;
+    justify-content: center;
+}
+
+.linha-tabela .container table {
+    width: 600px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.linha-tabela .container table tr th {
+    padding: 25px;
+    background-color: lightgray;
+}
+
+.linha-tabela .container table tr {
+    height: 40px;
+}
+
+.linha-tabela .container table tr td {
+    padding: 15px;
+}

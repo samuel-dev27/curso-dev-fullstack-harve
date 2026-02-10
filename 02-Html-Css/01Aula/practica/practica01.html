@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 01</title>
+    <style>
+        .linha-total {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 1280px;
+            height: 700px;
+        }
+
+        .superior {
+            display: flex;
+            height: 50%;
+           
+            margin-bottom: 5px;
+        }
+
+
+        .superior-izq {
+            flex: 1;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+
+        .superior-der {
+            flex: 1;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .objeto-interno {
+            width: 50%;
+            height: 50%;
+            background-color: blue;
+        }
+
+        .inferior {
+            display: flex;
+            height: 50%;
+           
+        }
+
+        .inferior-externo {
+            flex: 1;
+            background-color: purple;
+        }
+
+        .inferior-centro {
+            flex: 1;
+            background-color: yellow;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .inferior-der {
+            flex: 1;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="linha-total">
+        <div class="container">
+            <div class="superior">
+                <div class="superior-izq">
+                    <div class="objeto-interno"></div>
+                </div>
+                <div class="superior-der">
+                    <div class="objeto-interno"></div>
+                </div>
+            </div>
+            <div class="inferior">
+                <div class="inferior-externo"></div>
+                <div class="inferior-centro"></div>
+                <div class="inferior-externo"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

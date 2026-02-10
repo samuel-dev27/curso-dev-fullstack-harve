@@ -1,0 +1,32 @@
+.linha-tabela {
+    display: flex;
+    height: 500px;
+
+}
+
+.linha-tabela .container table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    
+  
+}
+ .linha-tabela .container table {
+    width: 50%;
+    height: 50%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+ .linha-tabela .container table tr th {
+    padding: 25px;
+    background-color: lightgray;
+    font-weight: 700;
+}
+
+ .linha-tabela .container table tr {
+    height: 40px;
+}
+
+ .linha-tabela .container table tr td {
+    padding: 15px;
+}
