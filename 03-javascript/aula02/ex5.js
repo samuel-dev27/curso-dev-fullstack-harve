@@ -18,5 +18,5 @@ Você deve pagar uma multa no valor de R$${valorMulta} pelo limite excedido.`)
     console.log("Velocidade dentro do limite.")
 
     alert(`Velocidade dentro do limite. Você estava a ${valorRadar}Km/h e o limite neste trecho é ${limiteVelocidade} Km/h.`)
-    alert(`Velocidade ${valorRadar}Km/h, Dentro do limite. Tenha uma boa viagem!`)
+    alert(`Dentro do limite. Tenha uma boa viagem!`)
 }
