@@ -1,4 +1,4 @@
-debugger
+
 console.log("Exercício 6")
 
 let ano = prompt("Informe o ano: ")
