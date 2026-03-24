@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harve Store - Início</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="navbar__logo">Harve<span>Store</span></a>
+
+      <ul class="navbar__menu">
+        <li><a href="index.html" class="navbar__link navbar__link--active">Início</a></li>
+        <li><a href="contato.html" class="navbar__link">Contato</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="carrinho.html" class="navbar__cart">
+          <span class="navbar__cart-icon">🛒</span>
+          <span id="cart-count" class="navbar__cart-count">0</span>
+        </a>
+
+        <!-- Estado: Deslogado (visível por padrão) -->
+        <div id="auth-buttons">
+          <a href="login.html" class="btn btn--outline btn--sm">Entrar</a>
+        </div>
+
+        <!-- Estado: Logado (escondido por padrão, JS vai controlar) -->
+        <div id="user-info" class="navbar__user" style="display: none;">
+          <span>👤</span>
+          <span id="user-name">Usuário</span>
+          <button id="btn-logout" class="btn btn--outline btn--sm">Sair</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__container">
+      <h1 class="hero__title">Encontre os melhores produtos aqui</h1>
+      <p class="hero__subtitle">
+        Descubra ofertas incríveis em tecnologia, moda e muito mais.
+        Tudo em um só lugar com entrega rápida.
+      </p>
+      <div class="hero__actions">
+        <a href="#products" class="btn btn--secondary">Ver Produtos</a>
+        <a href="cadastro.html" class="btn btn--outline" style="color: #fff; border-color: #fff;">Criar Conta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Nossos Produtos</h2>
+        <p class="section__subtitle">Confira os produtos disponíveis na nossa loja</p>
+      </div>
+
+      <!-- Alert para mensagens de erro/sucesso -->
+      <div id="products-alert" class="alert alert--error">
+        Erro ao carregar produtos. Verifique se a API está funcionando.
+      </div>
+
+      <!--
+        GRID DE PRODUTOS
+        ==================================================
+        Este grid será populado dinamicamente via JavaScript.
+        Os alunos devem usar fetch() para buscar da API e
+        criar os cards com manipulação de DOM.
+
+        Exemplo de card que deve ser criado via JS:
+
+        <div class="product-card" data-id="1">
+          <div class="product-card__image">
+            <img src="url" alt="Nome do produto">
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Categoria</span>
+            <h3 class="product-card__name">Nome do Produto</h3>
+            <p class="product-card__price">
+              R$ 99,90
+              <span class="product-card__price-old">R$ 149,90</span>
+            </p>
+            <div class="product-card__actions">
+              <button class="btn btn--primary btn--sm btn-add-cart">
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+      -->
+
+      <div id="products-grid" class="products-grid">
+        <!-- Loading skeletons (aparecem enquanto carrega, JS remove depois) -->
+        <div class="product-card">
+          <div class="product-card__image skeleton skeleton--image"></div>
+          <div class="product-card__body">
+            <div class="skeleton skeleton--text" style="width: 40%;"></div>
+            <div class="skeleton skeleton--title"></div>
+            <div class="skeleton skeleton--text" style="width: 30%;"></div>
+            <div class="skeleton skeleton--btn"></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__image skeleton skeleton--image"></div>
+          <div class="product-card__body">
+            <div class="skeleton skeleton--text" style="width: 40%;"></div>
+            <div class="skeleton skeleton--title"></div>
+            <div class="skeleton skeleton--text" style="width: 30%;"></div>
+            <div class="skeleton skeleton--btn"></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__image skeleton skeleton--image"></div>
+          <div class="product-card__body">
+            <div class="skeleton skeleton--text" style="width: 40%;"></div>
+            <div class="skeleton skeleton--title"></div>
+            <div class="skeleton skeleton--text" style="width: 30%;"></div>
+            <div class="skeleton skeleton--btn"></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__image skeleton skeleton--image"></div>
+          <div class="product-card__body">
+            <div class="skeleton skeleton--text" style="width: 40%;"></div>
+            <div class="skeleton skeleton--title"></div>
+            <div class="skeleton skeleton--text" style="width: 30%;"></div>
+            <div class="skeleton skeleton--btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOAST CONTAINER (para notificações) -->
+  <div class="toast-container">
+    <div id="toast" class="toast">
+      <span id="toast-message">Produto adicionado ao carrinho!</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Harve<span>Store</span></div>
+          <p class="footer__description">
+            Sua loja online favorita. Produtos de qualidade com os melhores preços do mercado.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer__title">Navegação</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Conta</h4>
+          <ul class="footer__links">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contato</h4>
+          <ul class="footer__links">
+            <li><a href="#">contato@harvestore.com</a></li>
+            <li><a href="#">(11) 99999-9999</a></li>
+            <li><a href="#">São Paulo, SP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 HarveStore. Projeto didático - JavaScript Fundamentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+
+</body>
+</html>
+
