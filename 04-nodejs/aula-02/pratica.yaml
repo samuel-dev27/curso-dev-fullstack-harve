@@ -1,0 +1,11 @@
+nome: Samuel
+valorTotal: 3500
+itens:
+  -nome: Computador
+  valor: 1500
+  quantidade: 1
+  -nome: Tablet
+  valor: 1000
+  quantidade: 2
+data: 30/03/2024
+  

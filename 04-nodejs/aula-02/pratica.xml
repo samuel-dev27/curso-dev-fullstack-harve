@@ -1,0 +1,17 @@
+<compra>
+    <nome>Samuel</nome>
+    <valorTotal>3500</valorTotal>
+    <itens>
+        <item>
+            <nome>Computador</nome>
+            <quantidade>1</quantidade>
+            <valor>1500</valor>
+        </item>
+        <item>
+            <nome>Tablet</nome>
+            <quantidade>2</quantidade>
+            <valor>500</valor>
+        </item>
+    </itens>
+    <data>30/03/2026</data>
+</compra>
