@@ -63,7 +63,7 @@ async function run() {
     app.use(express.json()); // Middleware para interpretar o corpo das requisições como JSON
 
 
-    app.post("/login", async (req, res) => {  //API de login para gerar o token de autenticação
+    app.post("/login", async (req, res) => {  //endpoint de login 
 
         const loginSchema = yup.object().shape(
             {
