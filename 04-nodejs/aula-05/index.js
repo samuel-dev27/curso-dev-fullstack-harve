@@ -3,7 +3,7 @@ async function run() {
         const CHAVE_API = "b259ae95"
         const URL = `https://api.hgbrasil.com/weather?city_name=Curitiba%2CPR&key=${CHAVE_API}`;
 
-        const response = await fetch(URL, {method });
+        const response = await fetch(URL);
 //await fetch(URL, {method }): ¡Ojo aquí! Tienes un pequeño error de sintaxis. La variable method no está definida. Debería ser { method: 'GET' } o simplemente fetch(URL).
 
         const dados = await response.json();
