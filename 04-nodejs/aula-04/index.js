@@ -2,12 +2,12 @@ import express from 'express';
 import { connect } from './database.js';
 import { authMiddleware } from './authMiddleware.js';
 import yup from 'yup';
-import e from 'express';
+import e from 'express';        
 
-const app = express();
 
 async function run() {
     const app = express();
+    
 
 
     app.get('/', (req, res) => {    //API de teste para verificar se o servidor está funcionando
@@ -82,7 +82,7 @@ async function run() {
 
         const sql2 = "SELECT * FROM usuarios";
         const [resultados] = await db.query(sql2);
-        console.log(resultados);
+        //console.log(resultados);
 
         if (!usuarios.length || usuarios[0].senha !== validado.senha) {
             res.status(401).json({ error: "Credenciais inválidas" });
