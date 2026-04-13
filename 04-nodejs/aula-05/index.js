@@ -8,7 +8,7 @@ async function run() {
 
         const dados = await response.json();
 
-        console.log(dados);
+        //console.log(dados);
         const temperatura = dados.results.temp;
         const data = dados.results.date;
         const condicao = dados.results.description;
