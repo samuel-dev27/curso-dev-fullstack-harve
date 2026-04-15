@@ -11,7 +11,13 @@ async function run() {
 
     });
 
-
+    app.post('/login', async (req, res) => { 
+        const controller = new UsuariosController();
+        
+        await controller.login(req, res);
+    }
+   
+    )
 
     app.listen(3333, () => console.log('servidor  iniciado em http://localhost:3333'));
 

@@ -9,4 +9,12 @@ export class UsuarioRepository {
 
         return resultado;
     }
+
+    async buscarPorEmail (email) {
+        const db = await mysqlService;
+        const sql = 'SELECT * FROM usuarios WHERE email = ?';
+        const [resultado] = await db.query(sql, [email]);
+
+        return resultado;
+    }
 }

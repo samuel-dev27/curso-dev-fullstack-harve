@@ -24,6 +24,8 @@ export class UsuarioService {
 
                 });
 
+               // if (!email)
+
                 const resultado = await this.repository.criar(nome, email, senha);
 
               return {
@@ -37,5 +39,47 @@ export class UsuarioService {
                 erro: error.message
             };
         }
+    }
+
+    async login (email, senha) {
+        const loginSchema = yup.object().shape({
+            email: yup.string().required().email(),
+            senha: yup.string().required().min(6),
+
+        })
+        try {
+            await loginSchema.validate({
+                email: email,
+                senha: senha,
+            },{
+                abortEarly: false,
+            
+            });
+
+            const usuario = await this.repository.buscarPorEmail(email, senha);
+
+            if (!usuario[0] || usuario[0].senha !== senha){
+                return {
+                    ok: false,
+                erro: 'credenciais inválidas'
+            }
+        }
+            
+            return {
+                ok: true,
+                mensagem: "usuário logado com sucesso",
+                resultado: {
+                    nome: usuario[0].nome,
+                    email: usuario[0].email,
+                }
+            };
+
+        } catch (error) {
+            return {
+                ok: false,
+                erro: error.message,
+            };
+        }
+
     }
 }

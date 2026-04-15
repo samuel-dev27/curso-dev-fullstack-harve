@@ -15,4 +15,15 @@ export class UsuariosController {
         const httpStatus = resultado.ok ? 201 : 400;
         res.status(httpStatus).json(resultado);
     }
+
+    async login (req, res) {
+        const resultado = await this.service.login(
+            req.body.email,
+            req.body.senha,
+        );
+
+        const httpStatus = resultado.ok ? 200 : 400;
+        res.status(httpStatus).json(resultado);
+    }
+
 }
