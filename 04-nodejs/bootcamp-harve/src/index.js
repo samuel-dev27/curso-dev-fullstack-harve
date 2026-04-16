@@ -1,5 +1,6 @@
 import express from 'express';
 import { UsuariosController } from './usuarios/controller.js';
+import { categoriasController } from './categorias/controller.js';
 
 async function run() {
     const app = express();
@@ -18,6 +19,16 @@ async function run() {
     }
    
     )
+
+    app.post("/categorias", async (req, res) => {
+        const controller = new categoriasController();
+        await controller.criar(req, res);
+    });
+
+    app.get("/categorias", async (req, res) => {
+        const controller = new categoriasController();
+        await controller.listar(req, res);
+    });
 
     app.listen(3333, () => console.log('servidor  iniciado em http://localhost:3333'));
 
