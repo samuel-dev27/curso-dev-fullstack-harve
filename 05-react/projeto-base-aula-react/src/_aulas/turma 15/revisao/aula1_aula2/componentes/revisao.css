@@ -1,0 +1,15 @@
+
+.classe-nome{
+  background-color: pink;
+  color: blue;
+}
+
+.classe-competencias{
+  background-color: black;
+  color: blue;
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid white;
+}

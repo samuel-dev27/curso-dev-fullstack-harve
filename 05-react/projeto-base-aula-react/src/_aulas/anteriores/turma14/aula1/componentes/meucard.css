@@ -1,0 +1,22 @@
+.corFundo {
+  background-color: blue;
+  display: flex;
+  height: 200px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.caixinha {
+  width: 48%;
+  border: solid 2px white;
+}
+
+.primary{
+  background-color: blue;
+  color: white;
+}
+
+.sucesso{
+  background-color: greenyellow;
+  color: black;
+}
