@@ -1,6 +1,7 @@
 import express from 'express';
 import { UsuariosController } from './usuarios/controller.js';
 import { categoriasController } from './categorias/controller.js';
+import { produtosController } from './produtos/controller.js';
 
 async function run() {
     const app = express();
@@ -27,6 +28,11 @@ async function run() {
 
     app.get("/categorias", async (req, res) => {
         const controller = new categoriasController();
+        await controller.listar(req, res);
+    });
+
+     app.get("/produtos", async (req, res) => {
+        const controller = new produtosController();
         await controller.listar(req, res);
     });
 
