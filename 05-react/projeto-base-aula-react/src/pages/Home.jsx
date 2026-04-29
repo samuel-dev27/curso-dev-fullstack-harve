@@ -1,4 +1,5 @@
 import CarouselAnuncios from "../componentes/CarouselAnuncios";
+import { Informacoes } from "../componentes/Curriculo/Informacoes";
 import NavBar from "../componentes/NavBar";
 
 function Home() {
@@ -7,7 +8,6 @@ function Home() {
     <div>
       <NavBar/>
       <CarouselAnuncios/>
-    
     </div>
   );
 }
