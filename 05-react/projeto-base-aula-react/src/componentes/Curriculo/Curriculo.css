@@ -1,0 +1,54 @@
+.titulo {
+    
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+   
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+       margin-bottom: 20px;
+}
+.container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.tamanho {
+    width: min-content 400px;
+    height: min-content
+}
+
+.border {
+    border-radius: 12px;
+    padding: 10px;
+    border: 2px solid #000000;
+    
+    
+}
+.subtitulo {
+    font-size: 20px;
+    font-weight: bold;
+}
+.paragrafo {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.button {
+    background-color: #7da7fa9d;
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #a3a2a3;
+}

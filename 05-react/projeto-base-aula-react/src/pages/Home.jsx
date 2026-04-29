@@ -1,5 +1,4 @@
 import CarouselAnuncios from "../componentes/CarouselAnuncios";
-import { ListaProdutos } from "../componentes/ListaProdutos";
 import NavBar from "../componentes/NavBar";
 
 function Home() {
@@ -8,7 +7,7 @@ function Home() {
     <div>
       <NavBar/>
       <CarouselAnuncios/>
-      <ListaProdutos/>
+    
     </div>
   );
 }
